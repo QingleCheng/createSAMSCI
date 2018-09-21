@@ -13,6 +13,10 @@ using this command to run the program:
 
 
 
+##Output file
+
+exampleSAMSCI.txt
+
 
 NOTE: the applications require the jansson lib be installed. jansson is 
 a free BSD lib recomended online for dealing with reading/writing json files.
