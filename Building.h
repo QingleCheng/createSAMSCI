@@ -26,10 +26,10 @@ public:
 
     Building();    
 
-    void readBIM(const char *fileEVENT, const char *fileBIM);
+    void readBIM(const char *fileBIM);
     void writeSAM(const char *path);
     void writeSAMSCI(const char *path);
-
+    void writeSAMdamage(const char *path);
     string GetHazusType();    
     static StruType s2StruType(string s);
     BldgOccupancy s2BldgOccupancy(string s);

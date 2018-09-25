@@ -71,7 +71,7 @@ Building::BldgOccupancy Building::s2BldgOccupancy(string s)
 }
 
 void
-Building::readBIM(const char *event, const char *bim)
+Building::readBIM( const char *bim)
 {
   //Parse BIM Json input file
   json_error_t error;
@@ -279,14 +279,25 @@ Building::writeSAMSCI(const char *path)
 //             area<<"\t"<<name<<"\t"<<name<<"\t"<<name<<"\n";
     outfile<<name<<"\t"<<0<<"\t"<<nStory<<"\t"<<storyheight<<"\t"<<area<<"\t"<<x<<"\t"<<y<<"\n";
     for (int i=0;i<nStory;i++){
-        outfile<<interstoryParams[1].K0<<"\t"<<interstoryParams[1].Sy<<"\t"<<interstoryParams[1].eta<<"\t"<<interstoryParams[1].C
-                                      <<"\t"<<interstoryParams[1].gamma<<"\t"<<interstoryParams[1].alpha<<"\t"<<interstoryParams[1].beta
-                                     <<"\t"<<interstoryParams[1].omega<<"\t"<<interstoryParams[1].eta_soft<<"\t"<<interstoryParams[1].a_k<<"\n";
+        outfile<<interstoryParams[0].K0<<"\t"<<interstoryParams[0].Sy<<"\t"<<interstoryParams[0].eta<<"\t"<<interstoryParams[0].C
+                                      <<"\t"<<interstoryParams[0].gamma<<"\t"<<interstoryParams[0].alpha<<"\t"<<interstoryParams[0].beta
+                                     <<"\t"<<interstoryParams[0].omega<<"\t"<<interstoryParams[0].eta_soft<<"\t"<<interstoryParams[0].a_k<<"\n";
     }
 
-    for (int k=0;k<4;k++)
-    {
-        outfile<<damageCriteria[k]<<"\t";
+
+}
+void
+Building::writeSAMdamage(const char *path)
+{
+    ofstream outfile(path,ios::app);//ios::app表示在原文件末尾追加
+    outfile<<name<<"\t"<<0<<"\t"<<nStory<<"\t"<<storyheight<<"\t"<<area<<"\t"<<x<<"\t"<<y<<"\n";
+    for (int i=0;i<nStory;i++){
+        for (int k=0;k<4;k++)
+        {
+            outfile<<damageCriteria[k]<<"\t";
+        }
+        outfile<<"\n";
     }
-    outfile<<"\n";
+
+
 }

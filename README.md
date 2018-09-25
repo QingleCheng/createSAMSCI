@@ -4,18 +4,16 @@ Create input file for regional SCI computation based on the SimCenter Workflow
 
 ##input file
 
-exampleBIM.json exampleEVENT.json exampleSAM.json
+1-BIM.json 2-BIM.json 3-BIM.json 4-BIM.json 5-BIM.json ...
 
 
-using this command to run the program:
-
-    createSCISAM.exe exampleBIM.json exampleEVENT.json exampleSAM.json exampleSAMSCI.txt
+Input the number of buildings to run the program.
 
 
 
 ##Output file
 
-exampleSAMSCI.txt
+BuildingInfo.txt
 
 
 NOTE: the applications require the jansson lib be installed. jansson is 
