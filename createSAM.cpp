@@ -26,9 +26,10 @@ int main()
 //  char *filenameEVENT = argv[2];
 //  char *filenameSAM = argv[3];
   string fileNameSAMSCI="BuildingInfo.txt";
+  ofstream outfile(fileNameSAMSCI.c_str());//ios::app表示在原文件末尾追加
+  outfile<<num<<endl;
   HazusSAM_Generator* aim = new HazusSAM_Generator();
-  ofstream outfile("BuildingInfo.txt");//ios::app表示在原文件末尾追加
-  outfile<<num<<"\n";
+
   for (int i=1;i<num+1;i++)
   {
       string filenameBIM=to_string(i)+"-BIM.json";

@@ -1,1 +1,17 @@
-{"GI": {"area": 118.91490152359718, "structType": "W1", "name": "10000", "numStory": 1, "yearBuilt": 1936, "occupancy": "Residential", "height": 3.0, "replacementCost": 24534.260869565216, "replacementTime": 180.0, "location": {"latitude": 37.707650567047899, "longitude": -122.45005147929901}}}
+{
+  "GI": {
+    "area": 118.91490152359718,
+    "structType": "W1",
+    "name": "4",
+    "numStory": 1,
+    "yearBuilt": 1936,
+    "occupancy": "Residential",
+    "height": 3.0,
+    "replacementCost": 24534.260869565216,
+    "replacementTime": 180.0,
+    "location": {
+      "latitude": 37.707650567047899,
+      "longitude": -122.45005147929901
+    }
+  }
+}
